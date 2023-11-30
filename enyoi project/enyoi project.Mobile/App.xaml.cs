@@ -1,4 +1,6 @@
-﻿namespace enyoi_project.Mobile
+﻿using enyoi_project.Mobile.MVVM.Views;
+
+namespace enyoi_project.Mobile
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new PersonView());
         }
     }
 }

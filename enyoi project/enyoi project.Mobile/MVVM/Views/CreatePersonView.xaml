@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enyoi_project.Mobile.MVVM.Views.CreatePersonView"
+             Title="Crear Persona"
+             BackgroundColor="White"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="5">
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >
+                    <StackLayout>
+                        <Label
+                            Text="Documento"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese el documento"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding Document}"
+                            Keyboard="Numeric"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >   
+                    <StackLayout>
+                        <Label
+                            Text="Nombre"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>   
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese su nombre"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding FirstName}"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >
+                    <StackLayout>
+                        <Label
+                            Text="Apellido"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese su apellido"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding LastName}"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >
+                    <StackLayout>
+                        <Label
+                            Text="Dirección"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese su dirección"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding Address}"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >
+                    <StackLayout>
+                        <Label
+                            Text="Teléfono"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese su número de teléfono"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding Phone}"
+                            Keyboard="Numeric"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    BorderColor="LightGray"
+                    CornerRadius="5"
+                    Padding="5"
+                    Margin="5"
+                    >
+                    <StackLayout>
+                        <Label
+                            Text="E-mail"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            ></Label>
+                        <Entry
+                            TextColor="Black"
+                            Placeholder="Ingrese su email"
+                            PlaceholderColor="LightGray"
+                            Text="{Binding Email}"
+                            Keyboard="Email"
+                            ></Entry>
+                    </StackLayout>
+                </Frame>
+
+                <Button
+                    Text="Guardar"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    FontSize="20"
+                    Margin="10"
+                    IsEnabled="{Binding IsEnabled}"
+                    ></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
