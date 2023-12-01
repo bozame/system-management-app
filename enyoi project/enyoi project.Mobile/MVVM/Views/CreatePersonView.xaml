@@ -134,7 +134,7 @@
 
                 <Button
                     Text="Guardar"
-                    Command="{Binding SaveCommand}"
+                    Command="{Binding SavePersonCommand}"
                     BackgroundColor="#512BD4"
                     TextColor="White"
                     CornerRadius="10"
@@ -144,6 +144,14 @@
                     Margin="10"
                     IsEnabled="{Binding IsEnabled}"
                     ></Button>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    Color="black"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5"
+                    ></ActivityIndicator>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
